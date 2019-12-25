@@ -2,3 +2,4 @@ geckodriver.log
 *.sqlite3
 *.pyv
 __pycache__
+.idea

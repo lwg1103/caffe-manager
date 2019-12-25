@@ -8,17 +8,17 @@ class HomepageTest(unittest.TestCase):
         self.enter_main_site()
         self.see_application_title()
 
-    def test_see_no_reservation(self):
-        self.fail('not implemented yet')
-
-    def test_add_reservation(self):
-        self.fail('not implemented yet')
-
-    def test_delete_reservation(self):
-        self.fail('not implemented yet')
-
-    def test_reservation_is_stored(self):
-        self.fail('not implemented yet')
+    # def test_see_no_reservation(self):
+    #     self.fail('not implemented yet')
+    #
+    # def test_add_reservation(self):
+    #     self.fail('not implemented yet')
+    #
+    # def test_delete_reservation(self):
+    #     self.fail('not implemented yet')
+    #
+    # def test_reservation_is_stored(self):
+    #     self.fail('not implemented yet')
 
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -30,7 +30,7 @@ class HomepageTest(unittest.TestCase):
         self.browser.get("http://localhost:8000")
 
     def see_application_title(self):
-        self.assertIn('Coffe Manager', self.browser.title)
+        self.assertIn('Caffe Manager', self.browser.title)
 
     def wait_n_seconds(self, seconds):
         time.sleep(seconds)
