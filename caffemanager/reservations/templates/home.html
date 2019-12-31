@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caffe Manager</title>
+</head>
+<body>
+    <h1 class="test" id="reservations-header">Reservations</h1>
+    <form method="POST">
+        <input id="new_reservation_name_input" name="reservation_name" placeholder="Type new reservation name" size="100"/>
+        {% csrf_token %}
+    </form>
+    {% for reservation in reservations %}
+        <p class="reservation-item">{{ reservation.name }}</p>
+    {% endfor %}
+</body>
+</html>
