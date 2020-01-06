@@ -24,3 +24,18 @@ class HomePageTest(TestCase):
         self.assertEqual("first", saved_reservations[0].name)
         self.assertEqual("second", saved_reservations[1].name)
 
+    def test_delete_reservation(self):
+        first_reservation = Reservation()
+        first_reservation.name = "first"
+        first_reservation.save()
+
+        second_reservation = Reservation()
+        second_reservation.name = "second"
+        second_reservation.save()
+
+        reservation_to_be_deleted = Reservation.objects.get(id=first_reservation.id)
+        reservation_to_be_deleted.delete()
+
+        saved_reservations = Reservation.objects.all()
+        self.assertEqual(1, len(saved_reservations))
+        self.assertEqual("second", saved_reservations[0].name)

@@ -19,5 +19,8 @@ from reservations import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path('', views.home_page, name='home')
+    path('', views.home_page, name='home'),
+    path('reservations', views.reservations, name='reservations'),
+    path('reservations/new', views.new_reservation, name='new_reservation'),
+    path('reservations/delete/<int:id>', views.delete_reservation, name='delete_reservation')
 ]
