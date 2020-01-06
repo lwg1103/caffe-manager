@@ -6,6 +6,8 @@ It was developed as a practice of TDD technique in python.
 
 ***
 ## Changelog
+### 0.3.0
+deleting reservations
 ### 0.2.0
 adding reservations
 ### 0.1.0 
