@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caffe Manager</title>
+</head>
+<body>
+    <h1 id="reservations-header">Reservation details</h1>
+    <p id="reservation-id">id: {{ reservation.id }}</p>
+    <p id="reservation-name">name: {{ reservation.name }}</p>
+    <p id="reservation-table">table: {{ reservation.table }}</p>
+    <p id="reservation-date">date: {{ reservation.date|date:"Y-m-d H:i" }}</p>
+    <p id="reservation-phone">phone: {{ reservation.telephone }}</p>
+    <p><a href="{% url 'delete_reservation' reservation.id %}">delete</a></p>
+</body>
+</html>

@@ -21,6 +21,7 @@ urlpatterns = [
     #path('admin/', admin.site.urls),
     path('', views.home_page, name='home'),
     path('reservations', views.reservations, name='reservations'),
+    path('reservations/<int:id>', views.show_reservation, name='show_reservation'),
     path('reservations/new', views.new_reservation, name='new_reservation'),
-    path('reservations/delete/<int:id>', views.delete_reservation, name='delete_reservation')
+    path('reservations/<int:id>/delete', views.delete_reservation, name='delete_reservation')
 ]
