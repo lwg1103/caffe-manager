@@ -8,6 +8,8 @@ WORK IN PROGRESS!
 
 ***
 ## Changelog
+### 0.5.0
+bootstrap included
 ### 0.4.0
 more reservation fields
 
